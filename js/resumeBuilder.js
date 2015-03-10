@@ -1,7 +1,7 @@
 var bio = {
   "name"    : "Benjamin Warren",
   "role"    : "Senior Analyst Developer & Stay-at-home Dad",
-  "picURL"  : "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/1/000/0fd/161/2cee61c.jpg",
+  "biopic"  : "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/1/000/0fd/161/2cee61c.jpg",
   "welcomeMessage"  : "Hey, thanks for taking the time to checkout my resume.",
   "skills"  : [
       "SQL",
@@ -146,59 +146,70 @@ var work = {
 var education = {
   "schools": [
     {
-      "name"  : "Wallsend South Public School",
-      "suburb": "Elermore Vale, NSW, Australia",
-      "years" : "1987-1987",
-      "degree": "Primary"
+      "name"    : "Wallsend South Public School",
+      "location": "Elermore Vale, NSW, Australia",
+      "degree"  : "Primary",
+      "majors"  : "",
+      "dates"   : 1987, //"1987-1987",
+      "url"     : ""
     },
     {
-      "name"  : "Moree Public School",
-      "suburb": "Moree, NSW, Australia",
-      "years" : "1987-1988",
-      "degree": "Primary"
+      "name"    : "Moree Public School",
+      "location": "Moree, NSW, Australia",
+      "degree"  : "Primary",
+      "majors"  : "",
+      "dates"   : 1988, //"1987-1988",
     },
     {
-      "name"  : "Brooklyn Public School",
-      "suburb": "Brooklyn, NSW, Australia",
-      "years" : "1988-1989",
-      "degree": "Primary"
+      "name"    : "Brooklyn Public School",
+      "location": "Brooklyn, NSW, Australia",
+      "degree"  : "Primary",
+      "majors"  : "",
+      "dates"   : 1989, //"1988-1989",
+      "url"     : ""
     },
     {
-      "name"  : "Charlestown East Public School",
-      "suburb": "Charlestown, NSW, Australia",
-      "years" : "1989-1989",
-      "degree": "Primary"
+      "name"    : "Charlestown East Public School",
+      "location": "Charlestown, NSW, Australia",
+      "degree"  : "Primary",
+      "majors"  : "",
+      "dates"   : 1989, //"1989-1989",
+      "url"     : ""
     },
     {
-      "name"  : "Cardiff Public School",
-      "suburb": "Cardiff, NSW, Australia",
-      "years" : "1990-1993",
-      "degree": "Primary"
+      "name"    : "Cardiff Public School",
+      "location": "Cardiff, NSW, Australia",
+      "degree"  : "Primary",
+      "majors"  : "",
+      "dates"   : 1993, //"1990-1993",
+      "url"     : ""
     },
     {
-      "name"  : "Merewether High School",
-      "suburb": "Broadmeadow, NSW, Australia",
-      "years" : "1994-1999",
-      "degree": "Secondary"
+      "name"    : "Merewether High School",
+      "location": "Broadmeadow, NSW, Australia",
+      "degree"  : "Secondary",
+      "majors"  : "",
+      "dates"   : 1999 //"1994-1999",
+      "url"     : ""
     }
   ],
   "onlineCourses" : [
     {
-      "course": "Front-End Web Developer Nanodegree",
+      "title": "Front-End Web Developer Nanodegree",
       "school": "Udacity",
-      "years" : "2015-2015",
+      "date"  : 2015,
       "url"   : "https://www.udacity.com/course/nd001"
     },
     {
-      "course": "JavaScript Basics",
+      "title": "JavaScript Basics",
       "school": "Udacity",
-      "years" : "2015-2015",
+      "date"  : 2015,
       "url"   : "https://www.udacity.com/course/ud804"
     },
     {
-      "course": "How to Use Git and GitHub",
+      "title": "How to Use Git and GitHub",
       "school": "Udacity",
-      "years" : "2015-2015",
+      "date"  : 2015,
       "url"   : "https://www.udacity.com/course/ud775"
     }
   ]
@@ -209,7 +220,7 @@ var projects : {
     {
       "title": "P1: Mockup to Web Site",
       "dates": "2015-02-01 - 2015-02-13",
-      "description":"Built a website based on the provided mockup.",
+      "description": "Built a website based on the provided mockup.",
       "images": ['images/p1-mock-web.jpg']
     }
   ]
