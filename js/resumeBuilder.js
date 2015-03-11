@@ -141,7 +141,7 @@ var work = {
       "description": "Provided expert knowledge of our CRM's data and data structures to facilate migration to a replacement system."
     }
   ]
-}
+};
 
 var education = {
   "schools": [
@@ -189,7 +189,7 @@ var education = {
       "location": "Broadmeadow, NSW, Australia",
       "degree"  : "Secondary",
       "majors"  : "",
-      "dates"   : 1999 //"1994-1999",
+      "dates"   : 1999, //"1994-1999",
       "url"     : ""
     }
   ],
@@ -213,9 +213,9 @@ var education = {
       "url"   : "https://www.udacity.com/course/ud775"
     }
   ]
-}
+};
 
-var projects : {
+var projects = {
   projects: [
     {
       "title": "P1: Mockup to Web Site",
@@ -224,7 +224,85 @@ var projects : {
       "images": ['images/p1-mock-web.jpg']
     }
   ]
-}
+};
+
+if (bio.skills.length) {
+
+  var $header = $('#header').hide(); //hide header while we're adding stuff to it.
+  var $topContacts = $('#topContacts');
+
+  //name, role, biopic, welcome message
+  var formattedName = HTMLheaderName.replace("%data%", bio.name);
+  var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+  var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+  var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+
+  $header.prepend([formattedName, formattedRole, formattedBioPic, formattedWelcomeMsg]);
+
+  //skills
+  var addSkills = (function(){
+    $header.append(HTMLskillsStart);
+
+    var $skills = $('#skills');
+    $.each(bio.skills, function(index, value){
+      $skills.append(HTMLskills.replace('%data%', value));
+    });
+  })();
+
+  //contacts
+  $.each(bio.contacts, function(name, value){
+
+    switch (name) {
+      case "mobile":
+        $topContacts.append(HTMLmobile.replace('%data%', value));
+        break;
+      case "email":
+        $topContacts.append(HTMLemail.replace('%data%', value));
+        break;
+      case "twitter":
+        $topContacts.append(HTMLtwitter.replace('%data%', value));
+        break;
+      case "github":
+        $topContacts.append(HTMLgithub.replace('%data%', value));
+        break;
+      case "blog":
+        $topContacts.append(HTMLblog.replace('%data%', value));
+        break;
+      case "location":
+        $topContacts.append(HTMLlocation.replace('%data%', value));
+        break;
+      default:
+        $topContacts.append(HTMLcontactGeneric.replace('%contact%', name).replace('%data%', value));
+        break;
+    };
+  });
+
+  $header.show(); //show header now we're finished adding to it.
+};
+
+
+var addJobs = (function(){
+  $workExperience = $('#workExperience').hide(); //hide workExperience div until we're done adding stuff.
+
+  $.each(work.jobs, function(index, value){
+    var job = value;
+    var $workEntry = $(HTMLworkStart);
+
+    $workEntry.append(
+      HTMLworkEmployer.replace('%data%', job.employer) +
+      HTMLworkTitle.replace('%data%', job.title)
+    );
+
+    $workEntry.append(HTMLworkDates.replace('%data%', job.dates));
+    $workEntry.append(HTMLworkLocation.replace('%data%', job.location));
+
+    $workEntry.append(HTMLworkDescription.replace('%data%', job.description));
+
+    $workExperience.append($workEntry);
+  });
+
+  $workExperience.show(); //show workExperience now we're finished adding to it.
+})();
 
 /*
 
