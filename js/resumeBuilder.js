@@ -1,8 +1,8 @@
 var bio = {
   "name"    : "Benjamin Warren",
-  "role"    : "Senior Analyst Developer & Stay-at-home Dad",
-  "biopic"  : "https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/1/000/0fd/161/2cee61c.jpg",
-  "welcomeMessage"  : "Hey, thanks for taking the time to checkout my resume.",
+  "role"    : "Senior Analyst Developer (and Stay-at-home Dad)",
+  "biopic"  : "images/me.jpg",
+  "welcomeMessage"  : "Thanks for taking the time to read my resume.",
   "skills"  : [
       "SQL",
       "JavaSript",
@@ -10,7 +10,7 @@ var bio = {
       "SharePoint",
       "T-SQL",
       "Teradata SQL",
-      "MS Office Suite",
+      "MS Office suite",
       "VBA",
       "Requirements Analysis",
       "Databases",
@@ -22,7 +22,8 @@ var bio = {
       "mobile"  : "0421035676",
       "email"   : "benjaminpwarren+udacity@gmail.com",
       "github"  : "benjaminpwarren",
-      "twitter" : "benjaminpwarren"
+      "twitter" : "@benjaminpwarren",
+      "location": "Newcastle, NSW, Australia"
   }
 };
 
@@ -72,7 +73,7 @@ var work = {
     },
     {
       "employer": "Child Support Agency",
-      "title"   : "Business Analyst (State)",
+      "title"   : "Business Analyst (NSW)",
       "location": "Newcastle, NSW, Australia",
       "dates"   : "March 2005 - November 2006 (1 year 9 months)",
       "description": "Developed reporting, workload delivery, and automation systems using HTML, JavaScript, and VBA."
@@ -94,7 +95,7 @@ var work = {
     {
       "employer": "Australian Prudential Regulation Authority",
       "title"   : "Contract Developer",
-      "location": "Canberra, ACT, Australia & Newcastle, NSW, Australia",
+      "location": "Canberra, ACT, Australia",
       "dates"   : "December 2009 - November 2011 (1 year, 11 months)",
       "description": "Developed decision review system (MS Access) and a mobile quality assurance recording system (Windows Mobile 6)"
     },
@@ -122,8 +123,8 @@ var work = {
     {
       "employer": "Department of Human Services",
       "title"   : "Senior Analyst / Developer, Assistant Director",
-      "location": "Brisbane, Qld, Australia & Newcastle, NSW, Australia",
-      "dates"   : "September 2013 - Present (1 year 7 months)",
+      "location": "Brisbane, Qld, Australia",
+      "dates"   : "September 2013 - June 2014 (10 months)(moved to Newcastle and continued role)",
       "description": "Development and maintenance of our internal division workload management system using SharePoint with forms customised using JavaScript and HTML."
     },
     {
@@ -136,9 +137,16 @@ var work = {
     {
       "employer": "Department of Human Services",
       "title"   : "Senior Project Officer",
-      "location": "Brisbane, Qld, Australia & Canberra, ACT, Australia",
+      "location": "Brisbane, Qld, Australia",
       "dates"   : "January 2014 - June 2014 (1 year)(concurrent with other role)",
       "description": "Provided expert knowledge of our CRM's data and data structures to facilate migration to a replacement system."
+    },
+    {
+      "employer": "Department of Human Services",
+      "title"   : "Senior Analyst / Developer, Assistant Director",
+      "location": "Newcastle, NSW, Australia",
+      "dates"   : "September 2013 - Present",
+      "description": "Development and maintenance of our internal division workload management system using SharePoint with forms customised using JavaScript and HTML."
     }
   ]
 };
@@ -150,47 +158,48 @@ var education = {
       "location": "Elermore Vale, NSW, Australia",
       "degree"  : "Primary",
       "majors"  : "",
-      "dates"   : 1987, //"1987-1987",
-      "url"     : ""
+      "dates"   : 1987,
+      "url"     : "http://www.wallsends-p.schools.nsw.edu.au/"
     },
     {
       "name"    : "Moree Public School",
       "location": "Moree, NSW, Australia",
       "degree"  : "Primary",
       "majors"  : "",
-      "dates"   : 1988, //"1987-1988",
+      "dates"   : 1988,
+      "url"     : "http://www.moree-p.schools.nsw.edu.au/"
     },
     {
       "name"    : "Brooklyn Public School",
       "location": "Brooklyn, NSW, Australia",
       "degree"  : "Primary",
       "majors"  : "",
-      "dates"   : 1989, //"1988-1989",
-      "url"     : ""
+      "dates"   : 1989,
+      "url"     : "http://www.brooklyn-p.schools.nsw.edu.au/"
     },
     {
       "name"    : "Charlestown East Public School",
       "location": "Charlestown, NSW, Australia",
       "degree"  : "Primary",
       "majors"  : "",
-      "dates"   : 1989, //"1989-1989",
-      "url"     : ""
+      "dates"   : 1989,
+      "url"     : "http://www.charlestoe-p.schools.nsw.edu.au/"
     },
     {
       "name"    : "Cardiff Public School",
       "location": "Cardiff, NSW, Australia",
       "degree"  : "Primary",
       "majors"  : "",
-      "dates"   : 1993, //"1990-1993",
-      "url"     : ""
+      "dates"   : 1993,
+      "url"     : "http://cardiffpublicschool.com/"
     },
     {
       "name"    : "Merewether High School",
       "location": "Broadmeadow, NSW, Australia",
       "degree"  : "Secondary",
       "majors"  : "",
-      "dates"   : 1999, //"1994-1999",
-      "url"     : ""
+      "dates"   : 1999,
+      "url"     : "http://www.merewether-h.schools.nsw.edu.au/"
     }
   ],
   "onlineCourses" : [
@@ -216,174 +225,203 @@ var education = {
 };
 
 var projects = {
-  projects: [
+  "projects": [
     {
       "title": "P1: Mockup to Web Site",
       "dates": "2015-02-01 - 2015-02-13",
       "description": "Built a website based on the provided mockup.",
-      "images": ['images/p1-mock-web.jpg']
+      "images": ["images/p1-mock-web_300.jpg"]
+    },
+    {
+      "title": "P2: Interactive Resume",
+      "dates": "2015-03-10 - current",
+      "description": "Built an interactive resume.",
+      "images": ["images/p2-resume.jpg", "images/p2-resume-2.jpg"]
     }
   ]
 };
 
-if (bio.skills.length) {
+bio.display = function(){
 
-  var $header = $('#header').hide(); //hide header while we're adding stuff to it.
-  var $topContacts = $('#topContacts');
+  if (bio.skills.length) {
 
-  //name, role, biopic, welcome message
-  var formattedName = HTMLheaderName.replace("%data%", bio.name);
-  var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-  var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
-  var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+    var $header = $("#header").hide(); //hide header while we"re adding stuff to it.
+    var $topContacts = $("#topContacts");
 
-  $header.prepend([formattedName, formattedRole, formattedBioPic, formattedWelcomeMsg]);
+    //name, role, biopic, welcome message
+    var formattedName = HTMLheaderName.replace("%data%", bio.name);
+    var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+    var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
+    var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
-  //skills
-  var addSkills = (function(){
-    $header.append(HTMLskillsStart);
+    $header.prepend([formattedName, formattedRole])
+    $header.append([formattedBioPic, formattedWelcomeMsg]);
 
-    var $skills = $('#skills');
-    $.each(bio.skills, function(index, value){
-      $skills.append(HTMLskills.replace('%data%', value));
+    //skills
+    var displaySkills = (function(){
+      $header.append(HTMLskillsStart);
+
+      var $skills = $("#skills");
+      $.each(bio.skills, function(index, value){
+        $skills.append(HTMLskills.replace("%data%", value));
+      });
+    })();
+
+    //contacts
+    $.each(bio.contacts, function(name, value){
+
+      switch (name) {
+        case "mobile":
+          $topContacts.append(HTMLmobile.replace("%data%", value));
+          break;
+        case "email":
+          $topContacts.append(HTMLemail.replace("%data%", value));
+          break;
+        case "twitter":
+          $topContacts.append(HTMLtwitter.replace("%data%", value));
+          break;
+        case "github":
+          $topContacts.append(HTMLgithub.replace("%data%", value));
+          break;
+        case "blog":
+          $topContacts.append(HTMLblog.replace("%data%", value));
+          break;
+        case "location":
+          $topContacts.append(HTMLlocation.replace("%data%", value));
+          break;
+        default:
+          $topContacts.append(HTMLcontactGeneric.replace("%contact%", name).replace("%data%", value));
+          break;
+      };
     });
-  })();
 
-  //contacts
-  $.each(bio.contacts, function(name, value){
+    $('#footerContacts').append($topContacts.children().clone());
 
-    switch (name) {
-      case "mobile":
-        $topContacts.append(HTMLmobile.replace('%data%', value));
-        break;
-      case "email":
-        $topContacts.append(HTMLemail.replace('%data%', value));
-        break;
-      case "twitter":
-        $topContacts.append(HTMLtwitter.replace('%data%', value));
-        break;
-      case "github":
-        $topContacts.append(HTMLgithub.replace('%data%', value));
-        break;
-      case "blog":
-        $topContacts.append(HTMLblog.replace('%data%', value));
-        break;
-      case "location":
-        $topContacts.append(HTMLlocation.replace('%data%', value));
-        break;
-      default:
-        $topContacts.append(HTMLcontactGeneric.replace('%contact%', name).replace('%data%', value));
-        break;
-    };
-  });
-
-  $header.show(); //show header now we're finished adding to it.
+    $header.show(); //show header now we"re finished adding to it.
+  };
 };
 
+work.display = function(){
+  var $workExperience = $("#workExperience").hide();
 
-var addJobs = (function(){
-  $workExperience = $('#workExperience').hide(); //hide workExperience div until we're done adding stuff.
-
-  $.each(work.jobs, function(index, value){
+  $.each(work.jobs.reverse(), function(index, value){
     var job = value;
     var $workEntry = $(HTMLworkStart);
 
-    $workEntry.append(
-      HTMLworkEmployer.replace('%data%', job.employer) +
-      HTMLworkTitle.replace('%data%', job.title)
-    );
+    $workEntry.append(HTMLworkEmployer.replace("%data%", job.employer) + HTMLworkTitle.replace("%data%", job.title));
 
-    $workEntry.append(HTMLworkDates.replace('%data%', job.dates));
-    $workEntry.append(HTMLworkLocation.replace('%data%', job.location));
-
-    $workEntry.append(HTMLworkDescription.replace('%data%', job.description));
+    $workEntry.append(HTMLworkDates.replace("%data%", job.dates));
+    $workEntry.append(HTMLworkLocation.replace("%data%", job.location));
+    $workEntry.append(HTMLworkDescription.replace("%data%", job.description));
 
     $workExperience.append($workEntry);
   });
 
-  $workExperience.show(); //show workExperience now we're finished adding to it.
-})();
+  //Show More option
+  $workExperience.find(".work-entry:gt(3)").hide();
 
-/*
+  var $showMore = '<a href="#" id="showMoreJobs" class="showMore">>Show more...</a>';
+  $workExperience.append($(HTMLworkStart).append($showMore));
 
-var addBio = (function(){
-  var $header = $("#header");
+  $("#showMoreJobs").on("click", function(){
+    $(".work-entry").show();
+    $(this).remove();
+  });
 
-  var formattedName = HTMLheaderName.replace("%data%", bio.name);
-  var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
+  $workExperience.show();
+};
 
-  // add name as first child of header, and role after name.
-  // changed as prepending twice is silly
-  $(formattedName).prependTo($header).after(formattedRole);
-  //$("#header").prepend(formattedRole);
-  //$("#header").prepend(formattedName);
+education.display = function(){
+  var $education = $("#education").hide();
 
-  var formattedMobile = HTMLmobile.replace("%data%", bio.mobile);
-  var formattedEmail = HTMLemail.replace("%data%", bio.email);
-  var formattedBioPic = HTMLbioPic.replace("%data%", bio.picURL);
-  var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.msg );
+  //schools
+  $.each(education.schools.reverse(), function(index, value){
+    var school = value;
+    var $educationEntry = $(HTMLschoolStart);
 
-  var $topContacts =  $("#topContacts");
-  $(formattedBioPic).insertBefore($topContacts);
-  $(formattedWelcomeMsg).insertBefore($topContacts);
+    var $schoolNameLink = $(HTMLschoolName.replace("%data%", school.name) + HTMLschoolDegree.replace("%data%", school.degree));
+    $schoolNameLink.attr('href', school.url).attr('target', '_blank');
+    $educationEntry.append($schoolNameLink);
 
-  $(formattedMobile).appendTo($topContacts);
-  $(formattedEmail).appendTo($topContacts);
+    $educationEntry.append(HTMLschoolDates.replace("%data%", school.dates));
+    $educationEntry.append(HTMLschoolLocation.replace("%data%", school.location));
 
-  // add skills
-  var addSkills = (function(){
+    //since I haven't attended university/college, I have no majors.
+    //$educationEntry.append(HTMLschoolMajor.replace("%data%", school.major || "N/A"));
 
-    $(HTMLskillsStart).insertBefore($topContacts);
-    var $skills = $("#skills");
-    console.log()
+    //adding this as the HTMLschoolMajor stub had a BR which achieved the same effect.
+    $educationEntry.append("<div style='clear:both'></div>");
 
-    var iSkills = bio.skills.length;
-    for (var iSkill = 0; iSkill < iSkills; iSkill++){
+    $education.append($educationEntry);
+  });
 
-      var formattedSkill = HTMLskills.replace("%data%", bio.skills[iSkill]);
-      console.log(formattedSkill);
-      $skills.append(formattedSkill);
+  //online courses
+  if (education.onlineCourses.length){
+
+    $education.append(HTMLonlineClasses);
+
+    $.each(education.onlineCourses, function(index, value){
+      var onlineCourse = value;
+      var $educationEntry = $(HTMLschoolStart);
+
+      var $onlineTitleLink = $(HTMLonlineTitle.replace("%data%", onlineCourse.title) + HTMLonlineSchool.replace("%data%", onlineCourse.school));
+      $onlineTitleLink.attr('href', onlineCourse.url).attr('target', '_blank');
+      $educationEntry.append($onlineTitleLink);
+
+      $educationEntry.append(HTMLonlineDates.replace("%data%", onlineCourse.date));
+      $educationEntry.append($('<p></p>').append(HTMLonlineURL.replace("%data%", onlineCourse.url)));
+
+      $education.append($educationEntry);
+    });
+
+  };
+
+  $education.show();
+};
+
+projects.display = function(){
+  var $projects = $("#projects").hide();
+
+  $.each(projects.projects.reverse(), function(index, value){
+    var project = value;
+    var $projectEntry = $(HTMLprojectStart);
+
+    $projectEntry.append(HTMLprojectTitle.replace("%data%", project.title));
+    $projectEntry.append(HTMLprojectDates.replace("%data%", project.dates));
+    $projectEntry.append(HTMLprojectDescription.replace("%data%", project.description));
+
+    if (project.images.length) {
+      for (var iImage = 0, iImages = project.images.length; iImage < iImages; iImage++){
+        $projectEntry.append(HTMLprojectImage.replace("%data%", project.images[iImage]));
+      }
     }
-    $skills.insertBefore($topContacts);
 
-  })();
+    $projects.append($projectEntry);
+  });
 
-})();
+  $projects.show();
+};
 
-var addWork = (function(){
+function inName(namesStr){
+  if (namesStr) {
+    var names = namesStr.trim().split(" ");
+    names[0] = names[0][0].toUpperCase() + names[0].slice(1).toLowerCase();
+    names[1] = names[1].toUpperCase();
+    return names.join(" ");
+  } else {
+    return false;
+  }
+}
 
-  //var $workExperience = $("#workExperience");
+function locationizer(work){
+  return work.jobs.map(function(obj){
+    return obj.location;
+  });
+}
 
-  var $workEntry = $(HTMLworkStart);
+bio.display();
+work.display();
+education.display();
+projects.display();
 
-  var formattedEmployer = HTMLworkEmployer.replace("%data%", work.employer);
-  var formattedTitle = HTMLworkTitle.replace("%data%", work.position);
-  var formattedWorkDates = HTMLworkDates.replace("%data%", work.years);
-  var formattedLocation = HTMLworkLocation.replace("%data%", work.citiesStr);
-
-  $(formattedEmployer+formattedTitle).appendTo($workEntry);
-  $(formattedWorkDates).appendTo($workEntry);
-  $(formattedLocation).appendTo($workEntry);
-
-  $workEntry.appendTo("#workExperience");
-
-})();
-
-var addEducation = (function(){
-
-  var $educationEntry = $(HTMLschoolStart);
-
-
-  var formattedSchoolName = HTMLschoolName.replace("%data%", education["schoolName"]);
-  var formattedDegree = HTMLschoolDegree.replace("%data%", education["degree"]);
-  var formattedDates = HTMLschoolDates.replace("%data%", education["years"]);
-  var formattedCity = HTMLschoolLocation.replace("%data%", education["city"]);
-
-  $(formattedSchoolName + formattedDegree).appendTo($educationEntry);
-  $(formattedDates).appendTo($educationEntry);
-  $(formattedCity).appendTo($educationEntry);
-
-  $educationEntry.appendTo("#education");
-})();
-
-*/
+$("#mapDiv").append(googleMap);

@@ -213,3 +213,7 @@ span {
     display: block;
   }
 }
+
+.showMore {
+  font-weight: bold;
+}

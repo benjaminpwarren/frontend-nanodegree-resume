@@ -58,14 +58,13 @@ var HTMLonlineURL = '<br><a href="#">%data%</a>';
 var internationalizeButton = '<button>Internationalize</button>';
 var googleMap = '<div id="map"></div>';
 
-
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
 $(document).ready(function() {
   $('button').click(function() {
     var iName = inName() || function(){};
-    $('#name').html(iName);  
+    $('#name').html(iName);
   });
 });
 
@@ -85,7 +84,7 @@ function logClicks(x,y) {
 }
 
 $(document).click(function(loc) {
-  // your code goes here!
+  logClicks(loc.pageX, loc.pageY);
 });
 
 
@@ -146,6 +145,15 @@ function initializeMap() {
   placeData is the object returned from search results containing information
   about a single location.
   */
+
+  // infoWindows are the little helper windows that open when you click
+  // or hover over a pin on a map. They usually contain more information
+  // about a location.
+  //moved so we can reuse the same infoWindow
+  var infoWindow = new google.maps.InfoWindow({
+      content: ''
+    });
+
   function createMapMarker(placeData) {
 
     // The next lines save location data from the search result object to local variables
@@ -156,21 +164,18 @@ function initializeMap() {
 
     // marker is an object with additional data about the pin for a single location
     var marker = new google.maps.Marker({
-      map: map,
-      position: placeData.geometry.location,
-      title: name
+      map:      map,
+      position:  placeData.geometry.location,
+      title:    name
     });
 
-    // infoWindows are the little helper windows that open when you click
-    // or hover over a pin on a map. They usually contain more information
-    // about a location.
-    var infoWindow = new google.maps.InfoWindow({
-      content: name
-    });
-
-    // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
-      // your code goes here!
+
+      var infoWindowContent = "<p>" + marker.title + "</p>";
+      infoWindowContent += "<p>" + lat.toFixed(2) + "," + lon.toFixed(2) + "</p>";
+      infoWindow.setContent(infoWindowContent);
+      infoWindow.open(map, marker);
+
     });
 
     // this is where the pin actually gets added to the map.
@@ -233,11 +238,11 @@ Uncomment the code below when you're ready to implement a Google Map!
 */
 
 // Calls the initializeMap() function when the page loads
-//window.addEventListener('load', initializeMap);
+window.addEventListener('load', initializeMap);
 
 // Vanilla JS way to listen for resizing of the window
 // and adjust map bounds
-//window.addEventListener('resize', function(e) {
+window.addEventListener('resize', function(e) {
   // Make sure the map bounds get updated on page resize
-//  map.fitBounds(mapBounds);
-//});
+  map.fitBounds(mapBounds);
+});
