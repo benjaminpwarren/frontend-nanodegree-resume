@@ -1,7 +1,7 @@
 var bio = {
   "name"    : "Benjamin Warren",
   "role"    : "Senior Analyst Developer (and Stay-at-home Dad)",
-  "biopic"  : "images/me.jpg",
+  "biopic"  : "images/meAndFam.jpg",
   "welcomeMessage"  : "Thanks for taking the time to read my resume.",
   "skills"  : [
       "SQL",
@@ -10,6 +10,7 @@ var bio = {
       "SharePoint",
       "T-SQL",
       "Teradata SQL",
+      "Git/GitHub",
       "MS Office suite",
       "VBA",
       "Requirements Analysis",
@@ -234,7 +235,7 @@ var projects = {
     },
     {
       "title": "P2: Interactive Resume",
-      "dates": "2015-03-10 - current",
+      "dates": "2015-03-10 - 2015-03-15",
       "description": "Built an interactive resume.",
       "images": ["images/p2-resume.jpg", "images/p2-resume-2.jpg"]
     }
@@ -246,7 +247,9 @@ bio.display = function(){
   if (bio.skills.length) {
 
     var $header = $("#header").hide(); //hide header while we"re adding stuff to it.
+    var $bio1 = $("#bio1").first();
     var $topContacts = $("#topContacts");
+    var $skillsBox = $("#skillsBox")
 
     //name, role, biopic, welcome message
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
@@ -254,16 +257,18 @@ bio.display = function(){
     var formattedBioPic = HTMLbioPic.replace("%data%", bio.biopic);
     var formattedWelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
-    $header.prepend([formattedName, formattedRole])
-    $header.append([formattedBioPic, formattedWelcomeMsg]);
+    $bio1.append(formattedName);
+    $bio1.append(formattedRole);
+
+    $bio1.append([formattedBioPic, formattedWelcomeMsg]);
 
     //skills
     var displaySkills = (function(){
-      $header.append(HTMLskillsStart);
+      $skillsBox.append(HTMLskillsStart);
 
       var $skills = $("#skills");
       $.each(bio.skills, function(index, value){
-        $skills.append(HTMLskills.replace("%data%", value));
+        $skills.append(HTMLskills.replace("%data%", value.replace(" ", "&nbsp;")));
       });
     })();
 
@@ -293,6 +298,7 @@ bio.display = function(){
           $topContacts.append(HTMLcontactGeneric.replace("%contact%", name).replace("%data%", value));
           break;
       };
+
     });
 
     $('#footerContacts').append($topContacts.children().clone());
@@ -308,7 +314,8 @@ work.display = function(){
     var job = value;
     var $workEntry = $(HTMLworkStart);
 
-    $workEntry.append(HTMLworkEmployer.replace("%data%", job.employer) + HTMLworkTitle.replace("%data%", job.title));
+    var $employerLink = $(HTMLworkEmployer.replace("%data%", job.employer) + HTMLworkTitle.replace("%data%", job.title));
+    $workEntry.append($("<div></div>").append($employerLink));
 
     $workEntry.append(HTMLworkDates.replace("%data%", job.dates));
     $workEntry.append(HTMLworkLocation.replace("%data%", job.location));
@@ -340,8 +347,8 @@ education.display = function(){
     var $educationEntry = $(HTMLschoolStart);
 
     var $schoolNameLink = $(HTMLschoolName.replace("%data%", school.name) + HTMLschoolDegree.replace("%data%", school.degree));
-    $schoolNameLink.attr('href', school.url).attr('target', '_blank');
-    $educationEntry.append($schoolNameLink);
+    $schoolNameLink.attr("href", school.url).attr("target", "_blank");
+    $educationEntry.append($("<div></div>").append($schoolNameLink));
 
     $educationEntry.append(HTMLschoolDates.replace("%data%", school.dates));
     $educationEntry.append(HTMLschoolLocation.replace("%data%", school.location));
@@ -365,8 +372,8 @@ education.display = function(){
       var $educationEntry = $(HTMLschoolStart);
 
       var $onlineTitleLink = $(HTMLonlineTitle.replace("%data%", onlineCourse.title) + HTMLonlineSchool.replace("%data%", onlineCourse.school));
-      $onlineTitleLink.attr('href', onlineCourse.url).attr('target', '_blank');
-      $educationEntry.append($onlineTitleLink);
+      $onlineTitleLink.attr("href", onlineCourse.url).attr("target", "_blank");
+      $educationEntry.append($("<div></div>").append($onlineTitleLink));
 
       $educationEntry.append(HTMLonlineDates.replace("%data%", onlineCourse.date));
       $educationEntry.append($('<p></p>').append(HTMLonlineURL.replace("%data%", onlineCourse.url)));
@@ -386,13 +393,14 @@ projects.display = function(){
     var project = value;
     var $projectEntry = $(HTMLprojectStart);
 
-    $projectEntry.append(HTMLprojectTitle.replace("%data%", project.title));
+    $projectEntry.append($("<div></div>").append(HTMLprojectTitle.replace("%data%", project.title)));
     $projectEntry.append(HTMLprojectDates.replace("%data%", project.dates));
     $projectEntry.append(HTMLprojectDescription.replace("%data%", project.description));
 
     if (project.images.length) {
       for (var iImage = 0, iImages = project.images.length; iImage < iImages; iImage++){
-        $projectEntry.append(HTMLprojectImage.replace("%data%", project.images[iImage]));
+        var $projectImage = $(HTMLprojectImage.replace("%data%", project.images[iImage]));
+        $projectEntry.append($projectImage);
       }
     }
 
@@ -425,3 +433,8 @@ education.display();
 projects.display();
 
 $("#mapDiv").append(googleMap);
+
+//fix bootstrap navbar not closing after click in collapsed views.
+$('.nav a').on('click', function(){
+  $(".navbar-toggle").click() //bootstrap 3.x by Richard
+});

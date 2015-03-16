@@ -1,0 +1,5 @@
+[Google Maps API](https://developers.google.com/maps/)
+[StackOverflow](https://stackoverflow.com/)
+  [For "Show More..." functionality](https://stackoverflow.com/questions/4054211/jquery-hide-show-list-items-after-nth-item)
+[jQuery API Docs](https://api.jquery.com/)
+[Bootstrap Documentation](http://getbootstrap.com/css/)

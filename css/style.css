@@ -1,17 +1,40 @@
+body {
+  font: 300 16px/32px 'Roboto', sans-serif;
+ /* color: #666;*/
+ padding-top: 70px;
+}
+
+
 * {
   padding:0;
   margin:0;
-  font-family: 'Roboto', sans-serif;
+  /*font-family: 'Roboto', sans-serif;*/
+}
+
+/* fix for fixed nav */
+h2:before {
+  display: block;
+  content: " ";
+  margin-top: -70px;
+  height: 70px;
+  visibility: hidden;
+}
+
+/* fix for Let's Connect h2 after above fix*/
+.footerTitleRow {
+  margin-top: 70px;
 }
 
 .clearfix {
   overflow: auto;
 }
 
+/*
 .education-entry, .work-entry, .project-entry {
   padding-left: 5%;
   padding-right: 5%;
 }
+
 
 h1 {
   font-size: 40px;
@@ -47,8 +70,7 @@ h2, h3, h4, h5 {
   padding-left: 5%;
   padding-right: 5%;
 }
-
-
+*/
 .date-text {
   font-style: italic;
   font-size: 14px;
@@ -65,7 +87,7 @@ h2, h3, h4, h5 {
   float: right;
 
 }
-
+/*
 p {
   font-size: 14px;
   color: #333333;
@@ -78,17 +100,32 @@ a {
   margin-top: 10px;
   display: block;
 }
+*/
 
+/*
 .welcome-message {
   font-style: italic;
   font-size: 18px;
   color: #F3F3F3;
   line-height: 28px;
+}*/
+
+.welcome-message {
+  font-size:20px;
+  font-style: italic;
 }
 
-#skillsH3 {
+.superfH3 {
   color: #F5AE23;
   display: none;
+}
+
+.label-text {
+  color: #F5AE23;
+}
+
+.value-text {
+ color: #FFFFFF;
 }
 
 .orange {
@@ -104,20 +141,34 @@ a {
   color: #FFFFFF;
 }
 
+.light-text {
+  color: #CCCCCC;
+}
+
 .gray {
   background-color: #F3F3F3;
   padding-bottom: 10px;
-  clear:both;
+  clear: both;
+}
+
+.light-background {
+  background-color: #F3F3F3;
 }
 
 .dark-gray {
   background-color: #4A4A4A;
 }
 
+.dark-background {
+  background-color: #000000;
+}
+
 /* TODO: Replace with image later */
+/*
 #header {
   background-color: #484848;
 }
+*/
 
 .flex-box {
   display: -webkit-flex;
@@ -127,6 +178,7 @@ a {
   justify-content: space-around;
   padding: 10px;
 }
+
 
 .center-content {
   padding-top: 2.5%;
@@ -142,12 +194,16 @@ ul {
 .biopic {
   float: left;
   padding: 10px;
-  width: 200px;
+  /*width: 200px;*/
   display: none;
 }
 
 img {
   padding: 10px;
+}
+
+.project-entry {
+  padding-bottom: 10px;
 }
 
 /* Bar chart stuff */
@@ -162,32 +218,32 @@ img {
   display: inline-block;
 }
 
-span {
+.flex-item span {
   padding: 5px;
 }
 
-#letsConnect {
+.footerTitleRow {
   text-align: center;
 }
 
-@media only screen and (max-width: 1024px) {
-  #letsConnect {
-    margin-top: 5%;
+@media only screen and (max-width: 991px) {
+  .footerTitleRow {
+    /*margin-top: 5%;*/
   }
 }
 
-@media only screen and (max-width:900px) {
+@media only screen and (max-width:991px) {
   .biopic {
-    width: 175px;
+    /*width: 175px;*/
   }
 }
 
-@media only screen and (max-width: 750px) {
-  #letsConnect {
-    margin-top: 10%;
+@media only screen and (max-width: 768px) {
+  .footerTitleRow {
+    /*margin-top: 10%;*/
   }
   .biopic {
-    width: 150px;
+    /*width: 150px;*/
   }
   .welcome-message {
     display: none;
@@ -207,8 +263,8 @@ span {
   padding-bottom: 5%;
 }
 
-@media only screen and (min-width: 750px) {
-  #skillsH3,
+@media only screen and (min-width: 768px) {
+  .superfH3,
   .biopic {
     display: block;
   }
