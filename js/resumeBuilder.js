@@ -70,7 +70,7 @@ var work = {
       "title"   : "Customer Service Officer",
       "location": "Newcastle, NSW, Australia",
       "dates"   : "May 2004 - March 2005 (11 months)",
-      "description": "Assessed customers for Child Support (maintenance) and collected unpaid maintenance."
+      "description": "Assessed and managed Child Support (maintenance) customers' cases, collected unpaid maintenance, and negotiated and monitored payment arrangements. Primarily via phone but with some face-to-face customer contact."
     },
     {
       "employer": "Child Support Agency",
