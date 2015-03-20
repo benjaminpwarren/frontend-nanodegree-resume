@@ -91,7 +91,7 @@ var work = {
       "title"   : "Senior Business Analyst",
       "location": "Canberra, ACT, Australia",
       "dates"   : "April 2009 - December 2011 (2 years 9 months)",
-      "description": "Targetted customer selection for workload delivery using T-SQL, and report development using Cognos, T-SQL, and VBA. Staff management."
+      "description": "Managed staff and performed targetted customer selection for workload delivery using T-SQL, and report development using Cognos, T-SQL, and VBA."
     },
     {
       "employer": "Australian Prudential Regulation Authority",
