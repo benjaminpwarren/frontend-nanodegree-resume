@@ -63,7 +63,7 @@ var work = {
       "title"   : "Customer Service Officer",
       "location": "Newcastle, NSW, Australia",
       "dates"   : "August 2002 - May 2004 (1 year 10 months)",
-      "description": "Helped customers with Direct Banking enquires (general banking and credit cards)."
+      "description": "Helped customers with general banking and credit card enquiries."
     },
     {
       "employer": "Child Support Agency",
