@@ -49,7 +49,7 @@ var work = {
       "title"   : "Customer Service Officer",
       "location": "Newcastle, NSW, Australia",
       "dates"   : "March 2001 - October 2001 (8 months)",
-      "description": "Made domestic flight reservations for Qantas Frequent Flyer customers."
+      "description": "Booked domestic flights, cars, and accommodation for Qantas Frequent Flyer customers."
     },
     {
       "employer": "TeleTech",
