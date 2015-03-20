@@ -42,7 +42,7 @@ var work = {
       "title"   : "Technical Support Officer",
       "location": "Sydney, NSW, Australia",
       "dates"   : "April 2000 - August 2000 (5 months)",
-      "description": "Helped customers with internet connectivity and configuration issues. (In the days of dial-up!)"
+      "description": "Provided technical support for customers with internet connectivity and configuration issues (connection, authentication, software support). (In the days of dial-up!)"
     },
     {
       "employer": "TeleTech",
