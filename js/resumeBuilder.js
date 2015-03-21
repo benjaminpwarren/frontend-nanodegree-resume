@@ -112,7 +112,7 @@ var work = {
       "title"   : "Senior Business Analyst / Developer, Assistant Director",
       "location": "Brisbane, Qld, Australia",
       "dates"   : "July 2012 - September 2013 (1 year 3 months)",
-      "description": "Responded to ad hoc data requests. Data sourced using primarily T-SQL and provided with detailed documentation and guidance."
+      "description": "Responded to ad hoc data requests. Data sourced using primarily Teradata SQL and provided with detailed documentation and guidance."
     },
     {
       "employer": "Department of Human Services",
