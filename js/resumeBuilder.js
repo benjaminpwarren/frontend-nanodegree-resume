@@ -105,7 +105,9 @@ var work = {
       "title"   : "Senior Project Officer",
       "location": "Newcastle, NSW, Australia",
       "dates"   : "December 2011 - June 2012 (7 months)",
-      "description": "Forecasted workload capacity (workload vs. staffing etc)."
+      "description": "Managed staff and developed workload capacity (workload vs. staffing etc) forecasting processes and tools. Developed and implemented strategies to increase capacity and decrease workload.
+
+Forecasting was performed using R."
     },
     {
       "employer": "Department of Human Services",
